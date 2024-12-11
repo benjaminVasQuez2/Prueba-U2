@@ -1,0 +1,82 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Navegación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #f0f0f0;
+        }
+
+        #content {
+            padding: 20px;
+        }
+
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+
+        #formulario {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+
+        #formulario input, #formulario textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #formulario button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        #formulario button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <img src="assets/Tecnico.png" alt="Tecnico logo" width="100" height="100">
+    <a routerLink="/Inicio" id="inicioBtn">Inicio</a>
+    <a routerLink="/Ubicanos" id="ubicamosBtn">Ubícanos</a>
+    <a routerLink="/Contactanos" id="contactanosBtn">Contáctanos</a>
+</nav>
+
+<router-outlet>
+  
+</router-outlet>
+
+<app-footer>
+
+</app-footer>

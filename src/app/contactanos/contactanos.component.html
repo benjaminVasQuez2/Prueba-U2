@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="text-center">
+    <img src="assets/celular.jpg" class="img-fluid" alt="Telefono" width="300">
+  </div>
+    <h1>
+        Formulario de contacto
+    </h1>
+    
+    <form class="pb-5" [formGroup]="formularioForm" (ngSubmit)="enviarDatos()">
+        <div class="mb-3">
+          <label for="exampleInputName" class="form-label">Nombre</label>
+          <input type="text" class="form-control" formControlName="Nombre" id="exampleInputName">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputLastname" class="form-label">Apellido</label>
+          <input type="text" class="form-control" formControlName="Apellido" id="exampleInputLastname">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail" class="form-label">Correo</label>
+            <input type="email" class="form-control" formControlName="Email" id="exampleInputEmail">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPhone" class="form-label">Celular</label>
+            <input type="number" class="form-control" formControlName="Celular" id="exampleInputPhone">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputMessage" class="form-label">Mensaje</label>   
+            <textarea class="form-control" formControlName="Mensaje" id=""></textarea>
+          </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+    <div class="card mt-4 pb-3" *ngIf="datos_formulario != null">
+      <div class="card-body">
+          <p class="card-text h4 b text-primary">
+              <strong>{{datos_formulario.Nombre}} {{datos_formulario.Apellido}}, su mensaje fue enviado correctamente</strong>
+          </p>
+      </div>
+  </div>
+</div>
